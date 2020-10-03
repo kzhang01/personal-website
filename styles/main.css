@@ -1,88 +1,154 @@
-h1 {
-  font-family: Verdana, sans-serif;
+* {
+  color: #93a4d1;
+  font-family: Helvetica, sans-serif;
   font-weight: normal;
+  text-align: justify;
+}
+h1 {
   font-size: 2em;
   text-align: center;
 }
 h2 {
-  font-family: Verdana, sans-serif;
-  font-weight: normal;
+  color: #007bff;
   font-size: 1.5em;
 }
-h3 {
-  font-family: Verdana, sans-serif;
-  font-weight: normal;
-  font-size: 1.3em;
-}
 p, ul {
-  font-family: Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.4em;
-  /* list-style: none; */
   list-style-type: circle;
 }
 
 img {
-  float: left;
-  padding: 10px;
-  margin-right: 10px;
+  float: right;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+hr {
+  clear: both;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 body {
-  background-image: linear-gradient(to bottom right,  #ffcccc, #b3ffcc);
-  /* background-image: url("../images/background.jpg"); */
+  background-color: #171c28;
   background-size: cover;
   background-position: center bottom;
   background-attachment: fixed;
 }
+
 /* styling links */
 a:link, a:visited {
-  color: black;
+  color: white;
   text-decoration: underline;
 }
 a:hover {
-  background-color: #b3ffcc;
+  background-color: #007bff;
 }
 a:active {
   text-decoration: none;
 }
 
-/* beginning of menu code */
-#menu {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
-}
-
- #menu-item {
-  float: left;
-}
-
-li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #b3ffcc;
-}
-/* end of menu code */
-
 .center {
   float: none;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
+  margin: auto;
+  width: 40%;
+}
+footer {
+    padding-top: 10px;
+    clear: both;
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+#footerLink{
+  font-size: 0.75em;
+  text-align: center;
+}
+
+#textblock {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  padding: 20px 10px;
+
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: #93a4d1;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 2em;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #93a4d1;
+  color: #171c28;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+.header a.logo:hover {
+  background-color: #171c28;
+  color: #93a4d1;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typewriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  content-bottom: auto;
+  line-height: normal;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3s steps(20, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  75% { border-color: orange; }
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 650px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
 }
