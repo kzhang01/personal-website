@@ -1,154 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
-  color: #93a4d1;
-  font-family: Helvetica, sans-serif;
-  font-weight: normal;
-  text-align: justify;
+    font-family: 'Nunito', sans-serif;
 }
-h1 {
-  font-size: 2em;
-  text-align: center;
-}
-h2 {
-  color: #007bff;
-  font-size: 1.5em;
-}
-p, ul {
-  font-size: 1em;
-  line-height: 1.4em;
-  list-style-type: circle;
-}
-
-img {
-  float: right;
-  margin-left: 50px;
-  margin-bottom: 20px;
-}
-
-hr {
-  clear: both;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
 body {
-  background-color: #171c28;
-  background-size: cover;
-  background-position: center bottom;
-  background-attachment: fixed;
+    margin: 0;
+    line-height: 2em;
+    background: #FDFDFD;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth;
 }
 
-/* styling links */
-a:link, a:visited {
-  color: white;
-  text-decoration: underline;
-}
-a:hover {
-  background-color: #007bff;
-}
-a:active {
-  text-decoration: none;
+main {
+    margin: 0 50px;
 }
 
-.center {
-  float: none;
-  display: block;
-  margin: auto;
-  width: 40%;
+/* styling the navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
-footer {
-    padding-top: 10px;
-    clear: both;
+nav ul li {
+    display: inline;
+    text-align: center;
 }
-
-#footerLink{
-  font-size: 0.75em;
-  text-align: center;
+nav ul {
+    padding: 0;
 }
-
-#textblock {
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 50px;
+.navbar-right a {
+    display: inline-block;
+    width: 100px;
+    padding: .75rem 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #6b6b6b;
 }
-/* Style the header with a grey background and some padding */
-.header {
-  overflow: hidden;
-  padding: 20px 10px;
-
+.navbar-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-
-/* Style the header links */
-.header a {
-  float: left;
-  color: #93a4d1;
-  text-align: center;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+.navbar-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-.header a.logo {
-  font-size: 2em;
+.navbar-links a {
+    display: inline-block;
+    width: 70px;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #6b6b6b;
 }
-
-/* Change the background color on mouse-over */
-.header a:hover {
-  background-color: #93a4d1;
-  color: #171c28;
+/*styling underline*/
+hr {
+    height: .20rem;
+    width: 33%;
+    margin: 0;
+    background: #73eba7;
+    border: none;
+    transition: .3s ease-in-out;
 }
-
-/* Style the active/current link*/
-.header a.active {
-  background-color: #007bff;
-  color: white;
+.two:hover ~ hr {
+    margin-left: 33%;
 }
-
-/* Float the link section to the right */
-.header-right {
-  float: right;
+.three:hover ~ hr {
+    margin-left: 66%
 }
 
-.header a.logo:hover {
-  background-color: #171c28;
-  color: #93a4d1;
+/* styling intro section */
+header {
+    padding: 96px 48px 160px 48px;
+}
+.headleft {
+    font-size: 1.5em;
+    padding-right: 64px;
+}
+.imgOfme {
+    transition: transform .8s ease-in-out;
+}
+.imgOfme:hover {
+    transform: scale(1.02);
+}
+.imgOfme img {
+    width: 35vw;
+    height: auto;
+    min-width: 240px;
+}
+.credits {
+    font-size: 0.5em;
 }
 
-.typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typewriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  content-bottom: auto;
-  line-height: normal;
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3s steps(20, end),
-    blink-caret 0.75s step-end infinite;
+/* styling project grid */
+.grid a {
+    text-decoration: none;
+    color: black;
 }
-
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  75% { border-color: orange; }
-}
-
-/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-@media screen and (max-width: 650px) {
-  .header a {
-    float: none;
-    display: block;
+.card {
+    padding: 0px;
     text-align: left;
+    color: black;
+    background: linear-gradient(145deg, #ffffff, #e4e4e4);
+    box-shadow: 36px 36px 79px #d5d5d5, -36px -36px 79px #ffffff;
+    text-align: left;
+    transition-duration: 800ms;
+}
+.card h3 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.card p {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 8px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+/* Hover effect for each card */
+.card:hover {
+    transition: all 0.3s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    background-color: #FDFDFD;
+}
+.card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #FDFDFD;
+    height: 32px;
+    width: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.19s ease-out;
+}
+.card::before:hover {
+    transform: scale(2.9);
+}
+.grid {
+    display: grid;
+    padding: 0 96px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+}
+
+/* about section */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    padding: 64px 96px 120px;
+}
+.leftabt {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.rightabt {
+    font-size: 16px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #1C1C1C;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 16px;
+    padding: 48px 146px 48px;
+    color: white;
+}
+.leftfoot {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.rightfoot {
+    font-size: 16px;
+}
+.selfplug {
+    font-size: 14px;
+    text-align: center;
+}
+.hoverlink {
+    color: white;
+    text-decoration: none;
+}
+a.hoverlink {
+    position: relative;
+}
+.hoverlink:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: visible;
+    transition: all 0.3s ease-in-out;
+}
+.hoverlink:hover:before {
+    visibility: visible;
+    width: 100%;
+}
+.switchContainer {
+  margin-left: 20px;
+}
+/*slider effect*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 27.2px;
+    margin-right: 0.5em;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20.8px;
+    width: 20.8px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #73eba7;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(20.8px);
+    -ms-transform: translateX(20.8px);
+    transform: translateX(20.8px);
+}
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* make it responsive */
+@media (min-width: 1200px) {
+  header {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      column-gap: 72px;
+      padding: 96px 48px 160px 48px;
   }
-  .header-right {
-    float: none;
+
+}
+@media (max-width: 1200px) {
+    .about {
+        width: 80%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .rightfoot {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+@media (max-width: 600px) {
+    main {
+        margin: 0;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .navbar-right {
+        flex-direction: column;
+    }
+    .navbar-left {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-links {
+        display: flex;
+        flex-direction: column;
+    }
   }
 }

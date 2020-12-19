@@ -1,36 +1,170 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>About Me</title>
-    <link rel="stylesheet" href="styles/main.css">
-  </head>
 
-  <body>
-    <div class="header">
-      <a href="index.html" class="logo"><div class="typewriter">Karina Zhang</div></a>
-      <div class="header-right">
-        <a class="active" href="index.html">Home</a>
-        <a href="road-to-tech.html">My Road to Tech</a>
-        <a href="interests.html">Interests</a>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karina Zhang</title>
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+    <link rel="stylesheet" href="styles/main.css" >
+</head>
+
+<body>
+    <main>
+        <nav>
+
+            <div class="navbar-right">
+                <img src="assets/logo.svg" alt="Logo" height="48px">
+                <a href="index.html">Karina Zhang</a>
+            </div>
+
+            <div class="navbar-left">
+
+                <div class="navbar-links">
+                    <ul>
+                        <li class="one"><a href="#about">About</a></li>
+                        <li class="two"><a href="#work">Work</a></li>
+                        <li class="three"><a href="#contact">Contact</a></li>
+                        <hr />
+                    </ul>
+                </div>
+
+                <div class="switchContainer">
+                    <label class="switch">
+                        <input type="checkbox" id="checkBox" onclick="toggleLightMode()">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+            </div>
+
+
+        </nav>
+
+        <!-- intro -->
+        <header>
+            <div class="headleft">
+                <p>Hey there! Nice to meet you <span>&#128075;&#127996;</span></p>
+
+                <p> My name is Karina Zhang and I am a <span class="nouns"></span>
+                  <br>
+                  <br>
+                  I love untangling problems, learning new technologies, and meeting new people.</p>
+                <br>
+                <p class="credits"> Enjoy some music while you're here! </p>
+
+                <audio controls>
+                    <source src="assets/lofi-track.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <p class="credits"> Artist: in love with a ghost <br>Song: we've never met but, can we have a coffee or something? </p>
+            </div>
+            <div class="imgOfme">
+                <img src="assets/me.JPG" alt="Avatar" width="5200px" height="3467px">
+            </div>
+
+        </header>
+
+        <!-- projects -->
+        <p id="work"></p>
+        <div class="projects">
+            <div class="grid">
+
+                <a href="https://apps.apple.com/us/app/terra-pocket-chinese-learning/id1498859549" class="card">
+                    <img src="assets/terra-1x.png" srcset="assets/terra-2x.png" height="1024px" width="1440px"  alt="Terra">
+                    <h3>Language Learning with Terra </h3>
+                    <p>An iOS app providing a more interactive way to learn a new language</p>
+                </a>
+
+                <a href="https://github.com/kzhang01/CodePath-iOS/tree/master/Flix" class="card">
+                    <img src="assets/flix-1x.png" srcset="assets/flix-2x.png" height="1024px" width="1440px" alt="Flix">
+                    <h3>Flix</h3>
+                    <p>Allows users to browse movies using MovieDB API</p>
+                </a>
+
+                <a href="https://www.thecompassalliance.org/" class="card">
+                    <img src="assets/compass-1x.png" srcset="assets/compass-2x.png" height="1024px" width="1440px" alt="Compass Alliance">
+                    <h3>Compass Alliance</h3>
+                    <p>Created a series of tutorial videos for rookie FRC teams in a global effort involving ten teams across three continents to make robotics more accessible</p>
+                </a>
+
+                <a href="https://github.com/kzhang01/Course-Registration-System" class="card">
+                    <img src="assets/course-1x.png" srcset="assets/course-2x.png" height="1024px" width="1440px" alt="Course Registration">
+                    <h3>Course Registration System</h3>
+                    <p>Applied an OOP approach in Java to develop the backend  for a functional course registration system</p>
+                </a>
+
+            </div> <!--end grid-->
+        </div> <!--end projects-->
+
+        <!-- about -->
+        <p id="about"></p>
+        <div class="about">
+
+            <div class="leftabt">
+                <p id="about">About</p>
+            </div>
+
+            <div class="rightabt">
+                <p>I am a collaborative, self-driven individual who is passionate about using tech to innovate solutions that better the world around me. This has led me to create an app that harnesses AI to teach users of all skill levels Chinese, and lead an on-campus initiative called Tech Treks that helps people just getting in tech to explore different disciplines and hear from industry professionals. I'm looking for opportunities where I can help enrich the user experience, build cool features, and above all else, seek learning opportunities that will help me keep innovating.</p>
+
+                <p>When I'm not working on my latest app idea or leading Tech Treks, you can find me at the nearest boba shop, trying to pick up a new instrument, or playing video games.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- contact information -->
+    <p id="contact"></p>
+    <footer>
+
+        <div class="leftfoot">
+            <p>Reach me</p>
+        </div>
+
+        <div class="rightfoot">
+            <p>I'm always looking to connect! If you have a thought or just want to say hello, feel free to drop me an email. </p>
+            <br>
+            <a href="mailto: karinazhang1@gmail.com" class="hoverlink">karinazhang1@gmail.com</a><br><br>
+            <a href="https://www.linkedin.com/in/karina-zhang/" class="hoverlink">Linkedin</a>
+        </div>
+
+    </footer>
+
+    <div class="selfplug">
+        <p>Copyright ©︎ 2020 Karina Zhang. All rights reserved.</p>
     </div>
 
-  	<main>
-	    <img src="images/me.JPG" alt="Me" class="center">
+    <!-- typing animation -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("body").css("display", "none");
+          $("body").fadeIn(2000);
+          });
+    </script>
+    <script src="js/typed.js"></script>
+    <script>
+      $(function(){
+        $(".nouns").typed({
+          strings: ["CS Student at NYU", "iOS Developer", "Web Developer", "Michigander", "New Jerseyan at heart", "Musician", "Problem Solver"],
+        typeSpeed: 0,
+        showCursor: false,
+        loop: true,
+        loopCount: false,
+        backDelay: 1500,
+        });
+      });
+    </script>
 
-	    <article>
-        <div id="textblock">
-  		    <h2>Hi there! 👋</h2>
-  		    <p>I'm Karina and I'm a sophomore here at NYU studying CS! I was born and raised in Central Jersey but now I live in Michigan with my mom, dad, and older sister. Click any of the above links to learn more.</p>
-        </div>
-      </article>
-  	</main>
+    <!-- light/dark mode -->
+    <script src="js/main.js"></script>
+</body>
 
-  	<footer>
-	    <p id="footerLink"><a href="https://cs.nyu.edu/courses/fall20/CSCI-UA.0004-004/">Intro to Web Design</a></p>
-  	</footer>
 
-  </body>
 </html>
